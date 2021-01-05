@@ -20,15 +20,9 @@ html, body {
     font-family: var(--font-family);
     position: relative;
     background: var(--dark-cyan);
-    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
-    background-repeat: no-repeat;
-    background-position: left -300px top -550px, right -300px bottom -550px;
-    font-size: 18px;
-}
-
-body::after {
-    content: '';
     
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .attribution {
@@ -52,6 +46,20 @@ a {
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: left -600px top -750px,right -600px bottom -750px;;
 }
 
 .card {
@@ -134,10 +142,7 @@ a {
     padding-top: .5em;
 }
 
-@media (max-device-width: 375px) {
-    .body {
-        background-position: left -10% top -10%, right -10px bottom -10%;
-    }
+@media screen and (max-width: 375px) {
 
     .card {
         width: 85vw;
