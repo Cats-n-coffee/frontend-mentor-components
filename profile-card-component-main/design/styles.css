@@ -59,7 +59,7 @@ body::before {
     width: 100%;
     background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
     background-repeat: no-repeat;
-    background-position: left -600px top -750px,right -600px bottom -750px;;
+    background-position: left -300px top -550px,right -300px bottom -600px;
 }
 
 .card {
@@ -153,5 +153,64 @@ body::before {
         top: 28%;
         left: 37%;
     }
+
+    body::before {
+        background-position: left -600px top -750px,right -600px bottom -750px;
+    }
 }
 
+@media screen and (max-width: 1100px) {
+
+    .card {
+        width: 30vw;
+    }
+
+    .profile-picture {
+        left: 45.5%;
+    }
+
+}
+
+@media screen and (max-width: 940px) {
+
+    .card {
+        width: 35vw;
+    }
+
+    .profile-picture {
+        left: 45%;
+    }
+}
+
+@media screen and (max-width: 840px) {
+
+    .card {
+        width: 35vw;
+    }
+
+    .profile-picture {
+        left: 44.5%;
+    }
+}
+
+@media screen and (max-width: 740px) {
+
+    .card {
+        width: 40vw;
+    }
+
+    .profile-picture {
+        left: 44%;
+    }
+}
+
+@media screen and (max-width : 640px) {
+
+    .card {
+        width: 45vw;
+    }
+
+    .profile-picture {
+        left: 43.5%;
+    }
+}
