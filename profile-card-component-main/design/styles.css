@@ -142,7 +142,7 @@ body::before {
     padding-top: .5em;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 375px) {
 
     .card {
         width: 85vw;
