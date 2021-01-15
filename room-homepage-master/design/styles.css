@@ -1,8 +1,3 @@
-/*@media only screen and (max-width: 990px) {
-    .desktop_slider{display:none; visibility: hidden;}
-    .mobile_slider{display:block; visibility: visible;}
-}*/
-
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
 
 :root {
@@ -18,12 +13,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* ------------------------------------- GENERAL STYLES ------------------------------ */
 html, body {
     font-family: var(--font-family);
     font-size: 12px;
     height: 100%;
     width: 100%;
+    max-width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -32,11 +28,11 @@ html, body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    color: var(--white);
+    color: var(--dark-gray);
 }
 
 .attribution a {
-    color: var(--white);
+    color: var(--dark-gray);
 }
 
 a {
@@ -44,120 +40,398 @@ a {
     color: var(--black);
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-}
-
-.top-section {
-    display: flex;
-    height: 65vh;
-}
-
-.top-left-section {
-    width: 255%;
-    background: url('../images/desktop-image-hero-1.jpg');
-
-}
-
-header {
-    display: flex;
-    padding: 4.5em 4em;
-}
-
-.logo {
-    padding-right: 4em;
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li {
-    padding-right: 2em;
+li {
     list-style: none;
 }
 
-nav ul li a {
-    color: var(--white);
-    text-transform: lowercase;
-    font-weight: 500;
+#container {
+    height: 100%;
+    width: 100%;
 }
 
-.top-right-section {
-    display: flex;
-    flex-direction: column;
-    padding: 5em;
+.top-section {
+    width: 100%;
 }
 
-.top-right-section p:first-child {
-    font-weight: 600;
-    font-size: 3.7em;
-    letter-spacing: -0.05em;
-    padding-bottom: .5em;
+.image-section {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
-
-.top-right-section p:nth-child(2) {
-    line-height: 1.5em;
-    font-size: 13px;
-    padding-bottom: 2em;
-}
-
-.top-right-section span {
-    text-transform: uppercase;
-    font-size: 1.3em;
-    letter-spacing: .6em;
-}
-
-.top-right-section span a img {
-    padding-left: 2em;
-}
-
-.slider-buttons-div {
-  
-    display: flex;
-    height: 65px;
-    width: 100px;
-   
-} 
 
 .slider-buttons-div button {
-    background: var(--black);
+    width: 4em;
+    height: 100%;
+    outline: black;
+    background: black;
     border: none;
-    outline: var(--black);
-    padding: 1.3em 2.5em;
+    padding: 1em 1.5em;
+}
+
+.top-right-description div p:first-child {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+
+}
+
+.top-right-description div span a{
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.top-right-description div span img {
+    padding-left: 2rem;
+}
+
+.top-right-description div p:nth-child(2) {
+    line-height: 1.7rem;
+    color: var(--dark-gray);
+    padding-bottom: 1rem;
 }
 
 .bottom-section {
-    display: flex;
-    width: 100vw;
-    height: 35vh;
+    width: 100%;
 }
+
+.bottom-left-section img, .bottom-right-section img{
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+
+
+/* .bottom-right-section {
+    text-align: center;
+} */
+
+/* .bottom-right-section img{
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+    
+} */
 
 .bottom-middle-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 4em;
+    gap: 1.5rem;
+    padding: 3rem 4rem;
 }
 
 .bottom-middle-section p:first-child {
-    font-size: 1.1em;
     font-weight: 700;
-    letter-spacing: .3em;
     text-transform: uppercase;
-    padding-bottom: 1em;
+    letter-spacing: .3rem;
 }
 
-.bottom-middle-section p:last-child {
-    line-height: 1.5em;
+.bottom-middle-section p:nth-child(2) {
+    line-height: 1.7rem;
+    color: var(--dark-gray);
+}
+/* ----------------------------------------- MEDIA MOBILE -------------------------------- */
+@media screen and (min-width: 375px) {
+    
+    .mobile-active {
+        display: block;
+    }
+
+    .desktop-images {
+        display: none;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+
+    .attribution {
+        position: fixed;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+/* -------------------------------------- TOP SECTION ------------------------------------ */
+    .top-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-left-section {
+        width: 100%;
+    }
+
+    /* .image-section {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    } */
+
+    .mobile-images {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .mobile-images img {
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .top-left-section header {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        display: flex;
+        padding: 4rem 2rem;
+        width: 100%;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .hamburger {
+        margin-right: -1rem;
+    }
+/* ------------------------------------- MENU POPUP --------------------------------- */
+    .nav-wrapper {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(0, 0, 0, .5);
+        z-index: 10;
+        overflow: hidden;
+    }
+
+    .nav-wrapper nav {
+        display: flex;
+        height: 7rem;
+        background: var(--white);
+        padding: 0 2rem;
+        gap: 5rem;
+    }
+
+    .nav-wrapper .close-menu {
+        object-fit: contain;
+    }
+
+    .nav-wrapper nav ul {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+    }
+
+    .nav-wrapper nav ul li a {
+        text-transform: lowercase;
+        font-weight: 600;
+    }
+/* --------------------------------- SLIDER BUTTONS AND DESCRIPTIONS ------------------------- */
+    .slider-buttons-div {
+        position: relative;
+        top: -100%;
+        left: 72%;
+        height: auto;
+        width: auto;
+    }
+
+    .top-right-section {
+        width: 100%;
+        margin-bottom: -4rem;
+    }
+
+    .description-wrapper {
+        overflow: hidden;
+    }
+
+    .top-right-description {
+        margin: 5rem 0;
+        
+        width: 100%;
+        display: flex;
+        
+    }
+
+    .item-description{
+        display: flex;
+        flex: 0 0 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        flex-wrap: wrap;
+        gap: 1rem;
+        overflow-wrap: break-word;
+        padding: 0 2.5rem;
+    }
+
+    .top-right-description div p:first-child {
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -0.1rem;
+    
+    }
+
+    .top-right-description div p:nth-child(2) {
+        line-height: 1.5rem;
+        color: var(--dark-gray);
+        padding-bottom: 3rem;
+        overflow-wrap: break-word;
+    }
+/* --------------------------------------- BOTTOM SECTION ----------------------------- */
+    /* .bottom-section {
+        width: 100%;
+    }
+
+    .bottom-left-section img{
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
+    }
+
+    .bottom-middle-section {
+        margin: 5rem 3rem;
+    }
+
+    .bottom-right-section {
+        text-align: center;
+    }
+
+    .bottom-right-section img{
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
+        
+    } */
+    
 }
 
+/* ------------------------------------- MEDIA DESKTOP -------------------------------- */
+@media screen and (min-width: 1200px) {
+
+    .mobile-images {
+        display: none;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #close-ham-menu {
+        display: none;
+    }
+
+    #container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    .top-section {
+        width: 100%;
+        grid-column: 1;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: 840px auto;
+        grid-template-rows: auto;
+    }
+
+    .top-left-section {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        text-align: left;
+    }
+
+    .image-section {
+        width: auto;
+        overflow-x: hidden;
+    }
+
+    .desktop-images {
+        display: flex;
+    }
+
+    .top-right-section {
+        grid-column: -1;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        padding: 3rem 5rem;
+    }
+
+    .description-wrapper {
+        overflow: hidden;
+    }
+
+    .top-right-description {
+        width: 100%;
+        display: flex;
+    }
+
+    .item-description{
+        display: flex;
+        flex: 0 0 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        flex-wrap: wrap;
+        gap: 1rem;
+        overflow-wrap: break-word;
+    }
+
+    .top-right-description div p:first-child {
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -0.1rem;
+    }
+
+    .top-right-description div p:nth-child(2) {
+        line-height: 1.5rem;
+        color: var(--dark-gray);
+        padding-bottom: 3rem;
+        overflow-wrap: break-word;
+    }
+
+    .slider-buttons-div {
+        position: relative;
+        left: -5rem;
+        top: -1rem;
+        width: auto;
+    }
+
+    .slider-buttons-div button {
+        width: 6.7rem;
+        padding: 1.5rem 2.5rem;
+    }
+
+    .bottom-section {
+        grid-column: 1;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto;
+        margin-top: -0.2%;
+        width: 100%;
+    }
 
 
-
-
-
+}

@@ -54,42 +54,56 @@
       <div class="top-section">
           <div class="top-left-section">
               <header class="navbar">
-                  <div class="logo">
-                      <img src="./images/logo.svg">
+                  <div class="mobile-active hamburger" id="hamburger">
+                      <img src="images/icon-hamburger.svg" alt="open hamburger menu">
                   </div>
-                  <nav>
-                      <ul>
-                          <li><a href="#">Home</a></li>
-                          <li><a href="#">Shop</a></li>
-                          <li><a href="#">About</a></li>
-                          <li><a href="#">Contact</a></li>
-                      </ul>
-                  </nav>
+                  <div class="logo">
+                      <img src="./images/logo.svg" alt="room logo">
+                  </div>
+                  <div class="nav-wrapper">
+                      <nav>
+                        <img id="close-ham-menu" class="mobile-active close-menu" src="images/icon-close.svg" alt="close menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                      </nav>
+                  </div>
+                  
               </header>
               <div class="image-section">
-                  <!--
-                  <img id="image-1" src="images/desktop-image-hero-1.jpg">
-                  <img id="image-2" src="images/desktop-image-hero-2.jpg">
-                  <img id="image-3" src="images/desktop-image-hero-3.jpg">
-                  -->
+                  <div id="mobile-image-display" class="mobile-images images-to-slide-mobile">
+                    
+                    <img src="images/mobile-image-hero-1.jpg" alt="catalog white chairs">
+                    <img src="images/mobile-image-hero-2.jpg" alt="catalog designer chairs">
+                    <img src="images/mobile-image-hero-3.jpg" alt="catalog black metal chair">
+                    
+                  </div>
+                  <div id="desktop-image-display" class="desktop-images images-to-slide-desktop">
+                    
+                    <img id="image-1" src="images/desktop-image-hero-1.jpg" alt="catalog white chairs">
+                    <img id="image-2" src="images/desktop-image-hero-2.jpg" alt="catalog designer chairs">
+                    <img id="image-3" src="images/desktop-image-hero-3.jpg" alt="catalog black metal chair">
+                    
+                  </div>
+                  
               </div>
           </div>
-          <div class="slider-buttons-div">
-            <button class="slider-button" type="button"><img src="images/icon-angle-left.svg"></button><!--
-            --><button class="slider-button" type="button"><img src="images/icon-angle-right.svg"></button>
-        </div>
+          
           <div class="top-right-section">
-              <div class="top-right-description">
-                  <div id="description-1">
+            <div class="description-wrapper">
+                <div id="description-display" class="top-right-description">
+                  <div id="description-1" class="item-description">
                       <p>Discover innovative ways to decorate</p>
                       <p>We provide unmatched quality, comfort, and style for property owners across the country. 
                         Our experts combine form and function in bringing your vision to life. Create a room in your 
                         own style with our collection and make your property a reflection of you and what you love.
                       </p>
-                      <span><a href="#">Shop now<img src="images/icon-arrow.svg"></a></span>
+                      <span><a href="#">Shop now<img src="images/icon-arrow.svg" alt="arrow shop now"></a></span>
                   </div>
-                  <!--
-                  <div id="description-2">
+                  <div id="description-2" class="item-description">
                       <p>We are available all across the globe</p>
                         <p>With stores all over the world, it's easy for you to find furniture for your home or place of business. 
                           Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
@@ -97,7 +111,7 @@
                         </p>
                         <span><a href="#">Shop now<img src="images/icon-arrow.svg"></a></span>
                   </div>
-                  <div id="description-3">
+                  <div id="description-3" class="item-description">
                       <p>Manufactured with the best materials</p>
                       <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
                         to ensure that every product is made as perfect and as consistent as possible. With three decades of 
@@ -105,13 +119,18 @@
                       </p>
                       <span><a href="#">Shop now<img src="images/icon-arrow.svg"></a></span>
                   </div>
-                -->
-              </div>
+                </div>
+            </div>
+              
+              <div class="slider-buttons-div">
+                <button id="slider-arrow-left" class="slider-button" type="button"><img src="images/icon-angle-left.svg" alt="arrow left"></button><!--
+                --><button id="slider-arrow-right" class="slider-button" type="button"><img src="images/icon-angle-right.svg" alt="arrow right"></button>
+            </div>
           </div>
       </div>
       <div class="bottom-section">
           <div class="bottom-left-section">
-              <img src="images/image-about-dark.jpg">
+              <img src="images/image-about-dark.jpg" alt="dark seats and coffee table">
           </div>
           <div class="bottom-middle-section">
               <p>About our furniture</p>
@@ -121,7 +140,7 @@
                 or anything in between. Product specialists are available to help you create your dream space.</p>
           </div>
           <div class="bottom-right-section">
-              <img src="images/image-about-light.jpg">
+              <img src="images/image-about-light.jpg" alt="white designer chair">
           </div>
       </div>
   </div>

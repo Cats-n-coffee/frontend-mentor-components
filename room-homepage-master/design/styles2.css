@@ -1,0 +1,182 @@
+/*@media only screen and (max-width: 990px) {
+    .desktop_slider{display:none; visibility: hidden;}
+    .mobile_slider{display:block; visibility: visible;}
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+:root {
+    --font-family: 'Spartan', sans-serif;
+    --dark-gray: hsl(0, 0%, 63%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --very-dark-gray: hsl(0, 0%, 27%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--font-family);
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: var(--white);
+}
+
+.attribution a {
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.top-section {
+    display: flex;
+    height: 65vh;
+}
+
+.top-left-section {
+    width: 255%;
+    background: url('../images/desktop-image-hero-1.jpg');
+    background-size: contain;
+}
+
+header {
+    display: flex;
+    padding: 4.5em 4em;
+}
+
+.logo {
+    padding-right: 4em;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding-right: 2em;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-transform: lowercase;
+    font-weight: 500;
+}
+
+.top-right-section {
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+    
+}
+
+.top-right-section p:first-child {
+    font-weight: 600;
+    font-size: 3.7em;
+    letter-spacing: -0.05em;
+    padding-bottom: .5em;
+}
+
+.top-right-section p:nth-child(2) {
+    line-height: 1.5em;
+    font-size: 13px;
+    padding-bottom: 2em;
+}
+
+.top-right-section span {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    letter-spacing: .6em;
+}
+
+.top-right-section span a img {
+    padding-left: 2em;
+}
+
+.slider-buttons-div {
+    position: relative;
+    top: 85.4%;
+    left:0;
+    display: flex;
+    height: 65px;
+    width: 100px;
+   
+} 
+
+.slider-buttons-div button {
+    background: var(--black);
+    border: none;
+    outline: var(--black);
+    padding: 1.3em 2.5em;
+}
+
+.bottom-section {
+    display: flex;
+    width: 100vw;
+    height: 35vh;
+}
+
+.bottom-left-section {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/image-about-dark.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bottom-middle-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4em;
+}
+
+.bottom-middle-section p:first-child {
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    padding-bottom: 1em;
+}
+
+.bottom-middle-section p:last-child {
+    line-height: 1.5em;
+}
+
+.bottom-right-section {
+    width: 140%;
+    height: 100%;
+    background-image: url('../images/image-about-light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
