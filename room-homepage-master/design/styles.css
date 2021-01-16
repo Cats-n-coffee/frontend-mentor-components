@@ -75,16 +75,21 @@ li {
 
 }
 
+.top-right-description div span {
+    width: 100%;
+}
+
 .top-right-description div span a{
     color: black;
     text-transform: uppercase;
     letter-spacing: 1rem;
     font-weight: 600;
     font-size: 1rem;
+    width: 100%;
 }
 
-.top-right-description div span img {
-    padding-left: 2rem;
+.top-right-description div span a span {
+    padding-right: 3rem;
 }
 
 .top-right-description div p:nth-child(2) {
@@ -102,19 +107,6 @@ li {
     width: 100%;
     object-fit: scale-down;
 }
-
-
-
-/* .bottom-right-section {
-    text-align: center;
-} */
-
-/* .bottom-right-section img{
-    height: 100%;
-    width: 100%;
-    object-fit: scale-down;
-    
-} */
 
 .bottom-middle-section {
     display: flex;
@@ -145,6 +137,10 @@ li {
         display: none;
     }
 
+    .desktop-menu {
+        display: none;
+    }
+
     body {
         overflow-y: auto;
     }
@@ -166,12 +162,6 @@ li {
     .top-left-section {
         width: 100%;
     }
-
-    /* .image-section {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    } */
 
     .mobile-images {
         width: 100%;
@@ -289,31 +279,6 @@ li {
         padding-bottom: 3rem;
         overflow-wrap: break-word;
     }
-/* --------------------------------------- BOTTOM SECTION ----------------------------- */
-    /* .bottom-section {
-        width: 100%;
-    }
-
-    .bottom-left-section img{
-        height: 100%;
-        width: 100%;
-        object-fit: scale-down;
-    }
-
-    .bottom-middle-section {
-        margin: 5rem 3rem;
-    }
-
-    .bottom-right-section {
-        text-align: center;
-    }
-
-    .bottom-right-section img{
-        height: 100%;
-        width: 100%;
-        object-fit: scale-down;
-        
-    } */
     
 }
 
@@ -328,7 +293,7 @@ li {
         display: none;
     }
 
-    #close-ham-menu {
+    .nav-wrapper {
         display: none;
     }
 
@@ -353,11 +318,45 @@ li {
         grid-row: 1;
     }
 
-    .navbar {
-        position: fixed;
+    .top-left-section header {
+        z-index: 2;
+        position: absolute;
         top: 0;
         left: 0;
-        text-align: left;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        padding: 5rem 4rem;
+        width: 35%;
+    }
+
+    .logo {
+        margin: 0;
+        padding-bottom: .5rem;
+    }
+
+    .desktop-menu {
+        display: block;
+        padding-left: 4rem;
+        width: 100%;
+    }
+
+    .desktop-menu nav ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .desktop-menu nav ul li a {
+        color: var(--white);
+        font-weight: 600;
+        text-transform: lowercase;
+        display: inline-block;
+        padding-bottom: .5rem;
+    }
+
+    .desktop-menu nav ul li:hover {
+        border-bottom: solid 1px var(--white);
     }
 
     .image-section {
@@ -394,21 +393,42 @@ li {
         justify-content: center;
         align-items: left;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 2.5rem;
         overflow-wrap: break-word;
     }
 
     .top-right-description div p:first-child {
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: 700;
         letter-spacing: -0.1rem;
     }
 
     .top-right-description div p:nth-child(2) {
-        line-height: 1.5rem;
+        line-height: 1.7rem;
         color: var(--dark-gray);
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
         overflow-wrap: break-word;
+    }
+
+    .top-right-description div span a{
+        color: black;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        width: 150%;
+    }
+
+    .top-right-description div span a span {
+        padding-right: 3rem;
+    }
+
+    .top-right-description div span:hover a {
+        color: var(--dark-gray);
+    }
+
+    .top-right-description div span:hover svg path {
+        fill: var(--dark-gray);
     }
 
     .slider-buttons-div {
@@ -423,6 +443,10 @@ li {
         padding: 1.5rem 2.5rem;
     }
 
+    .slider-buttons-div button:hover {
+        background: var(--very-dark-gray);
+    }
+
     .bottom-section {
         grid-column: 1;
         grid-row: 2;
@@ -433,5 +457,11 @@ li {
         width: 100%;
     }
 
+    .bottom-middle-section p:first-child {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .4rem;
+        font-size: 1.1rem;
+    } 
 
 }

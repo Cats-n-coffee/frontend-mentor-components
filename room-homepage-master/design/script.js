@@ -22,6 +22,7 @@ const slideRight = document.getElementById('slider-arrow-right');
 const imageDisplayMobile = document.querySelector('#mobile-image-display');
 const imageDisplayDesktop = document.getElementById('desktop-image-display');
 const imagesToSlideMobile = document.querySelectorAll('.images-to-slide-mobile img');
+const imagesToSlideDesktop = document.querySelectorAll('.desktop-images img');
 const descriptionDisplay = document.getElementById('description-display');
 const allDescriptions = document.querySelectorAll('.item-description');
 
@@ -29,41 +30,36 @@ const allDescriptions = document.querySelectorAll('.item-description');
 
 let imageCounter = 0;
 let descriptionCounter = 0;
-const imageSize = imagesToSlideMobile[0].clientWidth;
+let width = window.innerWidth;
+const mobileSize = imagesToSlideMobile[0].clientWidth;
+const desktopSize = imagesToSlideDesktop[0].clientWidth;
 const descriptionSize = allDescriptions[0].clientWidth;
 
 slideLeft.addEventListener('click', () => {
-    slideImagesBackward(imageDisplayMobile);
-    slideDescriptionBackward();
+    if (width <= 1200) {
+        slideImagesBackward(imageDisplayMobile, mobileSize);
+        slideDescriptionBackward();
+    }
+    else {
+        slideImagesBackward(imageDisplayDesktop, desktopSize);
+        slideDescriptionBackward();
+    }
+    
 });
+
 slideRight.addEventListener('click', () => {
-    slideImagesForward(imageDisplayMobile);
-    slideDescriptionForward();
+    if (width <= 1200) {
+        slideImagesForward(imageDisplayMobile, mobileSize);
+        slideDescriptionForward();
+    }
+    else {
+        slideImagesForward(imageDisplayDesktop, desktopSize);
+        slideDescriptionForward();
+    }
+    
 });
 
-// DRY: one function to go forward, one to go backward? same function called twice in a row
-// causing problem?
-
-// function slideForward(container, counter, itemSize) {
-//     if (counter === 2) {
-//         return
-//     }
-//     container.style.transform = 'transform 500ms ease-in-out';
-//     counter++;
-//     container.style.transform = 'translateX(' + (-itemSize * counter) + 'px)';
-// }
-
-// function slideBackward(container, counter, itemSize) {
-//     if (counter === 0) {
-//         return
-//     }
-//     container.style.transform = 'transform 500ms ease-in-out';
-//     counter--;
-//     container.style.transform = 'translateX(' + (-itemSize * counter) + 'px)';
-// }
-
-
-function slideImagesForward(container) {
+function slideImagesForward(container, imageSize) {
     if (imageCounter === 2) {
         return
     }
@@ -73,7 +69,7 @@ function slideImagesForward(container) {
     
 }
 
-function slideImagesBackward(container) {
+function slideImagesBackward(container, imageSize) {
     if (imageCounter === 0) {
         return
     }
@@ -102,5 +98,23 @@ function slideDescriptionBackward() {
     descriptionDisplay.style.transform = 'translateX(' + (-descriptionSize * descriptionCounter) + 'px)';
 }
 
+// DRY: one function to go forward, one to go backward? same function called twice in a row
+// causing problem?
 
-// Select appropriate images for screen size
+// function slideForward(container, counter, itemSize) {
+//     if (counter === 2) {
+//         return
+//     }
+//     container.style.transform = 'transform 500ms ease-in-out';
+//     counter++;
+//     container.style.transform = 'translateX(' + (-itemSize * counter) + 'px)';
+// }
+
+// function slideBackward(container, counter, itemSize) {
+//     if (counter === 0) {
+//         return
+//     }
+//     container.style.transform = 'transform 500ms ease-in-out';
+//     counter--;
+//     container.style.transform = 'translateX(' + (-itemSize * counter) + 'px)';
+// }
