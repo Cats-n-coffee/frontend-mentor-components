@@ -31,9 +31,11 @@ const allDescriptions = document.querySelectorAll('.item-description');
 let imageCounter = 0;
 let descriptionCounter = 0;
 let width = window.innerWidth;
-const mobileSize = imagesToSlideMobile[0].clientWidth;
-const desktopSize = imagesToSlideDesktop[0].clientWidth;
-const descriptionSize = allDescriptions[0].clientWidth;
+const mobileSize = imagesToSlideMobile[0].getBoundingClientRect().width;
+const desktopSize = imagesToSlideDesktop[0].getBoundingClientRect().width;
+const descriptionSize = allDescriptions[0].getBoundingClientRect().width;
+
+console.log(width);
 
 slideLeft.addEventListener('click', () => {
     if (width <= 1200) {
@@ -63,6 +65,7 @@ function slideImagesForward(container, imageSize) {
     if (imageCounter === 2) {
         return
     }
+    console.log(imageSize);
     container.style.transition = 'transform 500ms ease-in-out';
     imageCounter++;
     container.style.transform = 'translateX(' + (-imageSize * imageCounter) + 'px)';
