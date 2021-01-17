@@ -21,12 +21,11 @@ html, body {
     width: 100%;
     max-width: 100%;
     position: relative;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .attribution {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     color: var(--dark-gray);
@@ -45,41 +44,12 @@ li {
     list-style: none;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
 #container {
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
-/* -------------------------------- FOR MOBILE ONLY -------------------------------- */
-.mobile-active {
-    display: block;
-}
-
-.desktop-images {
-    display: none;
-}
-
-.desktop-menu {
-    display: none;
-}
-/* -------------------------------- END FOR MOBILE ONLY ----------------------------------------- */
-
-/* -------------------------------- IMAGE SECTION ---------------------------------------- */
 .top-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.top-left-section {
     width: 100%;
 }
 
@@ -89,138 +59,24 @@ img {
     overflow: hidden;
 }
 
-.mobile-images {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-/* .mobile-images img {
-    width: auto;
-    height: auto;
-    object-fit: contain;
-} */
-
-.top-left-section header {
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: transparent;
-    display: flex;
-    padding: 4rem 2rem;
-    width: 100%;
-}
-
-.logo {
-    margin: 0 auto;
-}
-
-.hamburger {
-    margin-right: -1rem;
-}
-
-/* ------------------------------------- MENU POPUP --------------------------------- */
-.nav-wrapper {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background: rgba(0, 0, 0, .5);
-    z-index: 10;
-    overflow: hidden;
-}
-
-.nav-wrapper nav {
-    display: flex;
-    height: 7rem;
-    background: var(--white);
-    padding: 0 2rem;
-    gap: 3rem;
-    position: relative;
-}
-
-.nav-wrapper .close-menu {
-    position: absolute;
-    top: -120px;
-    left: -100px;
-    object-fit: scale-down;
-}
-
-.nav-wrapper nav ul {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-.nav-wrapper nav ul li a {
-    text-transform: lowercase;
-    font-weight: 600;
-}
-/* ---------------------------------- LEFT/RIGHT SLIDER BUTTONS ----------------------------------- */
-.slider-buttons-div {
-    position: absolute;
-    top: -54px;
-    right: 0px;
-    height: auto;
-    width: auto;
-}
-
 .slider-buttons-div button {
-    width: 4.5rem;
+    width: 4em;
     height: 100%;
     outline: black;
     background: black;
     border: none;
     padding: 1em 1.5em;
 }
- /* ---------------------------------- DESCRIPTION SECTION ----------------------------------- */
-.top-right-section {
-    width: 100%;
-    margin-bottom: -4rem;
-    position: relative;
-}
-
-.description-wrapper {
-    overflow: hidden;
-}
-
-.top-right-description {
-    margin-top: 5rem;
-    width: 100%;
-    display: flex; 
-}
-
-.item-description{
-    display: flex;
-    flex: 0 0 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    flex-wrap: wrap;
-    gap: 1rem;
-    overflow-wrap: break-word;
-    padding: 0 2.5rem;
-}
 
 .top-right-description div p:first-child {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    letter-spacing: -0.1rem;
-}
+    letter-spacing: -0.05rem;
 
-.top-right-description div p:nth-child(2) {
-    line-height: 1.7rem;
-    color: var(--dark-gray);
-    padding-bottom: 1rem;
-    overflow-wrap: break-word;
 }
 
 .top-right-description div span {
     width: 100%;
-    padding-bottom: 2rem;
 }
 
 .top-right-description div span a{
@@ -236,16 +92,21 @@ img {
     padding-right: 3rem;
 }
 
-/* ------------------------------- BOTTOM SECTION ------------------------------- */
+.top-right-description div p:nth-child(2) {
+    line-height: 1.7rem;
+    color: var(--dark-gray);
+    padding-bottom: 1rem;
+}
+
 .bottom-section {
     width: 100%;
 }
 
-/* .bottom-left-section img, .bottom-right-section img{
-    height: auto;
+.bottom-left-section img, .bottom-right-section img{
+    height: 100%;
     width: 100%;
-    object-fit: contain;
-} */
+    object-fit: scale-down;
+}
 
 .bottom-middle-section {
     display: flex;
@@ -266,9 +127,9 @@ img {
     color: var(--dark-gray);
 }
 /* ----------------------------------------- MEDIA MOBILE -------------------------------- */
-
+@media screen and (min-width: 375px) {
     
-    /* .mobile-active {
+    .mobile-active {
         display: block;
     }
 
@@ -291,9 +152,9 @@ img {
     #container {
         display: flex;
         flex-direction: column;
-    } */
+    }
 /* -------------------------------------- TOP SECTION ------------------------------------ */
-    /* .top-section {
+    .top-section {
         display: flex;
         flex-direction: column;
     }
@@ -331,9 +192,9 @@ img {
 
     .hamburger {
         margin-right: -1rem;
-    } */
+    }
 /* ------------------------------------- MENU POPUP --------------------------------- */
-    /* .nav-wrapper {
+    .nav-wrapper {
         display: none;
         position: fixed;
         top: 0;
@@ -366,9 +227,9 @@ img {
     .nav-wrapper nav ul li a {
         text-transform: lowercase;
         font-weight: 600;
-    } */
+    }
 /* --------------------------------- SLIDER BUTTONS AND DESCRIPTIONS ------------------------- */
-    /* .slider-buttons-div {
+    .slider-buttons-div {
         position: relative;
         top: -100%;
         left: 72%;
@@ -417,16 +278,12 @@ img {
         color: var(--dark-gray);
         padding-bottom: 3rem;
         overflow-wrap: break-word;
-    } */
+    }
     
-
+}
 
 /* ------------------------------------- MEDIA DESKTOP -------------------------------- */
-@media screen and (min-width: 1000px) {
-
-    body {
-        overflow: hidden;
-    }
+@media screen and (min-width: 1200px) {
 
     .mobile-images {
         display: none;
@@ -441,7 +298,6 @@ img {
     }
 
     #container {
-        height: 100%;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
@@ -450,21 +306,16 @@ img {
 
     .top-section {
         width: 100%;
-        height: 100%;
         grid-column: 1;
         grid-row: 1;
         display: grid;
-        grid-template-columns: 58.25% auto;
+        grid-template-columns: 840px auto;
         grid-template-rows: auto;
     }
 
     .top-left-section {
         grid-column: 1;
         grid-row: 1;
-        min-height: auto;
-        min-width: auto;
-        /* width: 100%;
-        height: 100%; */
     }
 
     .top-left-section header {
@@ -476,7 +327,7 @@ img {
         display: flex;
         align-items: center;
         padding: 5rem 4rem;
-        width: 45%;
+        width: 35%;
     }
 
     .logo {
@@ -509,44 +360,30 @@ img {
     }
 
     .image-section {
-        width: 100%;
-        height: 100%;
+        width: auto;
         overflow-x: hidden;
-        min-height: auto;
-        min-width: auto;
     }
 
     .desktop-images {
-        min-height: auto;
-        min-width: auto;
-        width: 100%;
-        height: auto;
         display: flex;
     }
-
 
     .top-right-section {
         grid-column: -1;
         grid-row: 1;
         display: grid;
         grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-        position: relative;
-        max-height: auto;
+        grid-template-rows: 1fr auto;
+        padding: 3rem 5rem;
     }
 
     .description-wrapper {
         overflow: hidden;
-        grid-column: 1;
-        grid-row: 1;
-        width: 100%;
-        height: auto;
     }
 
     .top-right-description {
         width: 100%;
         display: flex;
-        margin: 1rem 0;
     }
 
     .item-description{
@@ -556,12 +393,12 @@ img {
         justify-content: center;
         align-items: left;
         flex-wrap: wrap;
-        gap: 1.5rem;
+        gap: 2.5rem;
         overflow-wrap: break-word;
     }
 
     .top-right-description div p:first-child {
-        font-size: 2.2rem;
+        font-size: 3rem;
         font-weight: 700;
         letter-spacing: -0.1rem;
     }
@@ -569,13 +406,8 @@ img {
     .top-right-description div p:nth-child(2) {
         line-height: 1.7rem;
         color: var(--dark-gray);
-        padding-bottom: .5rem;
+        padding-bottom: 2rem;
         overflow-wrap: break-word;
-    }
-
-    .top-right-description div span {
-        width: 100%;
-        padding-bottom: 0;
     }
 
     .top-right-description div span a{
@@ -601,26 +433,14 @@ img {
 
     .slider-buttons-div {
         position: relative;
+        left: -5rem;
+        top: -1rem;
         width: auto;
-        grid-column: 1;
-        grid-row: 2;
-        height: auto;
-        margin-bottom: -0.5rem;
-    }
-
-    .slider-buttons-wrapper {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: auto
-
     }
 
     .slider-buttons-div button {
-        width: auto;
-        height: auto;
-        padding: 3% 7.5%;
+        width: 6.7rem;
+        padding: 1.5rem 2.5rem;
     }
 
     .slider-buttons-div button:hover {
@@ -631,9 +451,9 @@ img {
         grid-column: 1;
         grid-row: 2;
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto 1fr auto;
         grid-template-rows: auto;
-        margin-top: -0.1%;
+        margin-top: -0.2%;
         width: 100%;
     }
 
@@ -644,76 +464,4 @@ img {
         font-size: 1.1rem;
     } 
 
-}
-
-@media screen and (min-width: 1150px) {
-    .top-left-section header {
-        width: 40%;
-    }
-
-    .top-right-section {
-        padding: 1.5rem 2.5rem;
-    }
-
-    .top-right-description {
-        margin-top: 2rem;
-    }
-
-    .top-right-description div p:first-child {
-        font-size: 2.5rem;
-    }
-
-    .top-right-description div p:nth-child(2) {
-        padding-bottom: 1.5rem;
-    }
-
-    .item-description {
-        gap: 2rem;
-    }
-
-    .slider-buttons-div {
-        margin-left: -2.5rem;
-        padding: 0;
-        margin-bottom: -2rem;
-    }
-
-    .slider-buttons-div button {
-        padding: 3% 7.5%;
-    }
-}
-
-@media screen and (min-width: 1400px) {
-    .top-left-section header {
-        width: 35%;
-    }
-
-    .top-right-section {
-        padding: 3rem 5rem 0 5rem;
-    }
-
-    .top-right-description {
-        margin-top: 5rem;
-    }
-
-    .top-right-description div p:first-child {
-        font-size: 3rem;
-    }
-
-    .top-right-description div p:nth-child(2) {
-        padding-bottom: 2rem;
-    }
-
-    .item-description {
-        gap: 2.5rem;
-    }
-
-    .slider-buttons-div {
-        margin-left: -5rem;
-        padding: 0;
-        margin-bottom: -0.5rem;
-    }
-
-    .slider-buttons-div button {
-        padding: 3% 7.75%;
-    }
 }

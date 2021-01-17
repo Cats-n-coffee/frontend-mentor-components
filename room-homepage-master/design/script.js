@@ -38,7 +38,7 @@ const descriptionSize = allDescriptions[0].getBoundingClientRect().width;
 console.log(width);
 
 slideLeft.addEventListener('click', () => {
-    if (width <= 1200) {
+    if (width <= 1000) {
         slideImagesBackward(imageDisplayMobile, mobileSize);
         slideDescriptionBackward();
     }
@@ -50,7 +50,7 @@ slideLeft.addEventListener('click', () => {
 });
 
 slideRight.addEventListener('click', () => {
-    if (width <= 1200) {
+    if (width <= 1000) {
         slideImagesForward(imageDisplayMobile, mobileSize);
         slideDescriptionForward();
     }
