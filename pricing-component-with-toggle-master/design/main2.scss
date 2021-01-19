@@ -116,7 +116,7 @@ body::before {
 }
 
 .toggle-div {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    // -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -141,7 +141,7 @@ body::before {
 
     .switch input {
         opacity: 0;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        // -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
         width: 0;
         height: 0;
     }
