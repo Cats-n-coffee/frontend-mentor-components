@@ -176,6 +176,10 @@ body::before {
         background: $light-grayish-blue;
     }
 
+    input:focus + .slider {
+        background: $light-grayish-blue;
+    }
+
     input:checked + .slider:before {
         -webkit-transform: translateX(26px);
                 transform: translateX(26px);
@@ -277,11 +281,6 @@ body::before {
     border-top: 1px solid $light-grayish-blue;
 }
 
-// .card p:nth-child(5) {
-//     margin-bottom: 32px;
-//     margin-bottom: 2rem;
-// }
-
 // Colors for white/blue cards and blue card slightly taller
 .white-card {
     background: white;
@@ -301,6 +300,12 @@ body::before {
         color: $button-purple;
         box-shadow: 0 0 0 1pt $grayish-blue;
     }
+
+    button:focus {
+        background: white;
+        color: $button-purple;
+        box-shadow: 0 0 0 2pt $grayish-blue;
+    }
 }
 
 .blue-card {
@@ -318,6 +323,12 @@ body::before {
         background: $button-purple;
         color: white;
         box-shadow: 0 0 0 1pt white;
+    }
+
+    button:focus {
+        background: $button-purple;
+        color: white;
+        box-shadow: 0 0 0 2pt white;
     }
 }
 
