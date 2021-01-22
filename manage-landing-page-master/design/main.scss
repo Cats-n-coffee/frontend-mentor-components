@@ -36,6 +36,9 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
+    background: $very-dark-blue;
+    color: white;
+    font-size: .9em;
 }
 
 /* ------------------------------------ GENERAL RULES -------------------------------- */
@@ -51,6 +54,7 @@ a {
     border: none;
     border-radius: 35px;
     background: $bright-red;
+    font-weight: 700;
     position: relative;
     // box-shadow: 0px 2px 15px 0px $bright-red;
 }
@@ -300,9 +304,131 @@ main {
 
     .slide-number {
         margin: 0 auto;
+        display: flex;
+        gap: 5px;
+        padding-top: 1.5em;
+
+        .slide-circle {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            border: 1px solid $bright-red;
+
+            
+        }
+
+        .active {
+            background: $bright-red;
+        }
     }
 
     a {
         margin: 0 auto;
+        padding: 2.5em 0;
+    }
+}
+
+#bottom-banner {
+    height: auto;
+    background: $bright-red;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 5em 2em;
+
+    h2 {
+        color: white;
+        font-size: 2.5em;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    a {
+        text-align: center;
+
+        button {
+            background-color: white;
+            color: $bright-red;
+            
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background: $very-dark-blue;
+    gap: 3em;
+    padding: 2em 0;
+
+    form {
+        text-align: center;
+
+        label {
+            padding-right: .5em;
+        }
+
+        input {
+            border-radius: 35px;
+            padding: .8em 1.5em;
+            border: none;
+            width: 62%;
+            font-family: $font-stack;
+        }
+
+        button {
+            text-transform: uppercase;
+            padding: .8em 2em;
+            font-family: $font-stack;
+            color: white;
+            border: none;
+            border-radius: 35px;
+            background: $bright-red;
+            font-weight: 700;
+            position: relative;
+        }
+    }
+
+    .nav-bottom-page {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        ul {
+
+            li {
+                list-style: none;
+                padding-bottom: .5em;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .all-logos {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+
+        .social-media {
+            width: 80%;
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-around;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    small {
+        text-align: center;
+        color: white;
     }
 }
