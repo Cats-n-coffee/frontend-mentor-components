@@ -176,30 +176,9 @@ main {
     }
 
     .section-2-bullets-points {
-        padding: 1em 0 1em 1em;
+        padding: 1em 0 0 1em;
 
         .bullet-point {
-            // div {
-            //     display: flex;
-            //     background: $very-pale-red;
-            //     align-items: center;
-            //     border-top-left-radius: 30px;
-            //     border-bottom-left-radius: 30px;
-
-            //     h3 {
-            //         padding-left: 1em;
-            //         font-size: 1em;
-            //         color: $dark-blue;
-            //     }
-            //     span {
-            //         padding: .4em 1.5em;
-            //         background: $bright-red;
-            //         border-radius: 30px;
-            //         display: inline-block;
-            //         color: white;
-            //         text-align: center;
-            //     }
-            // }
             display: grid;
             grid-template-columns: 65px auto;
             grid-template-rows: auto auto;
@@ -259,4 +238,71 @@ main {
 
     }
 
+}
+
+/* --------------------------------- SECTION 3 ------------------------------- */
+#section-3 {
+    display: flex;
+    flex-direction: column;
+    
+    h2 {
+        font-size: 2em;
+        color: $dark-blue;
+        text-align: center;
+        padding-bottom: 2em;
+    }
+
+    .review-slider {
+        display: flex;
+        overflow-x: scroll;
+        
+        .review {
+            flex: 1 0 90%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background: $very-light-grey;
+            margin: 45px 5% 0 5%;
+            padding: 2em 1em;
+
+            img {
+                margin: 0 auto;
+                margin-top: -70px;
+                width: 80px;
+                clip-path: circle(100px at center);
+                object-fit: scale-down;
+                background: transparent;
+            }
+
+            .review-bottom-div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                cite {
+                    text-align: center;
+                    font-style: normal;
+                    color: $dark-blue;
+                    font-weight: 700;
+                    padding: 1em 0;
+                }
+    
+                blockquote {
+                    text-align: center;
+                    color: $dark-grayish-blue;
+                    font-weight: 400;
+                    line-height: 1.8em;
+                }
+            }
+        }
+    }
+
+    .slide-number {
+        margin: 0 auto;
+    }
+
+    a {
+        margin: 0 auto;
+    }
 }
