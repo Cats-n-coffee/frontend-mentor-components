@@ -26,6 +26,9 @@ footer {
         text-align: center;
 
         .input-div {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2em;
             
             label {
                 padding-right: .5em;
@@ -35,9 +38,14 @@ footer {
                 border-radius: 35px;
                 padding: .8em 1.5em;
                 border: none;
-                width: 62%;
+                width: 120%;
                 font-family: $font-stack;
                 color: $dark-grayish-blue;
+            }
+
+            input:focus {
+                border-bottom: solid 2px $focus-red;
+                outline: none;
             }
 
             button {
@@ -81,6 +89,7 @@ footer {
 
                 a {
                     color: white;
+                    font-weight: 500;
                 }
 
                 a:hover, a:focus {
@@ -113,5 +122,6 @@ footer {
     small {
         text-align: center;
         color: white;
+        font-weight: 400;
     }
 }
