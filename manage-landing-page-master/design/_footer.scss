@@ -1,0 +1,117 @@
+// Variables
+
+// Font family
+$font-stack: 'Be Vietnam', sans-serif;
+
+// Colors
+$bright-red: hsl(12, 88%, 59%);
+$dark-blue: hsl(228, 39%, 23%);
+
+$dark-grayish-blue: hsl(227, 12%, 61%);
+$very-dark-blue: hsl(233, 12%, 13%);
+$very-pale-red: hsl(13, 100%, 96%);
+$very-light-grey: hsl(0, 0%, 98%);
+
+$focus-red: hsl(12, 79%, 71%);
+
+/* -------------------------------------- FOOTER ----------------------------------- */
+footer {
+    display: flex;
+    flex-direction: column;
+    background: $very-dark-blue;
+    gap: 3em;
+    padding: 2em 0;
+
+    form {
+        text-align: center;
+
+        .input-div {
+            
+            label {
+                padding-right: .5em;
+            }
+    
+            input {
+                border-radius: 35px;
+                padding: .8em 1.5em;
+                border: none;
+                width: 62%;
+                font-family: $font-stack;
+                color: $dark-grayish-blue;
+            }
+
+            button {
+                text-transform: uppercase;
+                padding: .8em 2em;
+                font-family: $font-stack;
+                color: white;
+                border: none;
+                border-radius: 35px;
+                background: $bright-red;
+                font-weight: 700;
+                position: relative;
+            }
+
+            button:hover, button:focus {
+                background: $focus-red;
+            }
+            
+        }
+        #error-div {
+            height: 30px;
+            width: 80%;
+            margin: 0 auto;
+            padding: .5em 0 0 3em;
+            color: $bright-red;
+            text-align: left;
+        }
+        
+    }
+
+    .nav-bottom-page {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        ul {
+
+            li {
+                list-style: none;
+                padding-bottom: .5em;
+
+                a {
+                    color: white;
+                }
+
+                a:hover, a:focus {
+                    color: $bright-red;
+                }
+            }
+        }
+    }
+
+    .all-logos {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+
+        .social-media {
+            width: 80%;
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-around;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    small {
+        text-align: center;
+        color: white;
+    }
+}

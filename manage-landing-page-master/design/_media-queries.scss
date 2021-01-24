@@ -1,0 +1,132 @@
+// Variables
+
+// Font family
+$font-stack: 'Be Vietnam', sans-serif;
+
+// Colors
+$bright-red: hsl(12, 88%, 59%);
+$dark-blue: hsl(228, 39%, 23%);
+
+$dark-grayish-blue: hsl(227, 12%, 61%);
+$very-dark-blue: hsl(233, 12%, 13%);
+$very-pale-red: hsl(13, 100%, 96%);
+$very-light-grey: hsl(0, 0%, 98%);
+
+$focus-red: hsl(12, 79%, 71%);
+
+/* ------------------------------------ MEDIA QUERIES ------------------------------- */
+@media screen and (min-width: 600px) {
+    #container::before {
+        max-width: 80%;
+        max-height: 80%;
+        
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #container {
+        padding: 0 5rem;
+    }
+
+    #section-1 {
+        flex-direction: row;
+        gap: 5rem;
+        padding: 3rem 0;
+
+        .section-1-introduction {
+            align-items: flex-start;
+            // flex: 1 0 40%;
+            gap: 1rem;
+
+            h1 {
+                text-align: left;
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+
+        img {
+            // object-fit: scale-down;
+            // flex: 1 0 50%;
+            height: auto;
+        }
+    }
+
+    #section-2 {
+        flex-direction: row;
+        padding: 2rem 0;
+    
+        .section-2-presentation {
+            h2 {
+                text-align: left;
+            }
+    
+            p {
+                text-align: left;
+            }
+        }
+    
+        .section-2-bullets-points {
+            .bullet-point {
+                grid-template-columns: 95px 1fr;
+                grid-template-rows: auto auto;
+                grid-template-areas: 
+                                    "number title"
+                                    ". para";
+        
+                span {
+                    grid-area: number;
+                    width: 65px;
+                    justify-self: flex-start;
+                }
+        
+                h3 {
+                    grid-area: title;
+                    padding-left: 0px;
+                }
+        
+                p {
+                    grid-area: para;
+                }
+            }
+        }
+    }
+    
+    #section-3 {
+        padding-top: 4em;
+        padding-bottom: 6em;
+        
+        .review-slider {
+            margin: 0 -5rem;
+
+
+            .review {
+                flex: 1 0 35%;
+                margin: 45px 2% 0 2%;
+                padding: 2em 3em;
+            }
+        }
+    
+        .slide-number {
+            display: none;
+        }
+    }
+
+    #bottom-banner {
+        margin: 0 -5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4em 6em;
+
+        h2 {
+            width: 40%;
+        }
+    }
+
+    footer {
+        margin: 0 -5rem;
+    }
+}

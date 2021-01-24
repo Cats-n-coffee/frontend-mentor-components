@@ -1,0 +1,105 @@
+// Variables
+
+// Font family
+$font-stack: 'Be Vietnam', sans-serif;
+
+// Colors
+$bright-red: hsl(12, 88%, 59%);
+$dark-blue: hsl(228, 39%, 23%);
+
+$dark-grayish-blue: hsl(227, 12%, 61%);
+$very-dark-blue: hsl(233, 12%, 13%);
+$very-pale-red: hsl(13, 100%, 96%);
+$very-light-grey: hsl(0, 0%, 98%);
+
+$focus-red: hsl(12, 79%, 71%);
+
+/* ---------------------------------- SECTION 2 ------------------------------------ */
+#section-2 {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+
+    .section-2-presentation {
+        padding: 0 2em 2em 2em;
+
+        h2 {
+            font-size: 2em;
+            color: $dark-blue;
+            text-align: center;
+            padding-bottom: .5em;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: .9em;
+            color: $dark-grayish-blue;
+            text-align: center;
+            line-height: 1.8em;
+        }
+    }
+
+    .section-2-bullets-points {
+        padding: 1em 0 0 1em;
+
+        .bullet-point {
+            display: grid;
+            grid-template-columns: 65px auto;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+                                "number title"
+                                "paragraph paragraph";
+
+            span {
+                grid-area: number;
+                background: $very-pale-red;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                justify-self: center;
+                align-self: center;
+                padding: .4em 0;
+                color: white;
+                position: relative;
+                width: 100%;
+            }
+
+            span::before{
+                content: attr(data-number);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $bright-red;
+                border-radius: 30px;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            h3 {
+                grid-area: title;
+                background: $very-pale-red;
+                color: $dark-blue;
+                font-size: 1em;
+                justify-self: center;
+                align-self: center;
+                width: 100%;
+                padding: .4em 0 .4em 1em;
+            }
+
+            p {
+                grid-area: paragraph;
+                font-weight: 400;
+                font-size: .9em;
+                color: $dark-grayish-blue;
+                text-align: left;
+                line-height: 1.8em;
+                padding: 1em .9em 2em 0;
+            }
+        }
+
+    }
+
+}
