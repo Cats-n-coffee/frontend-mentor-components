@@ -8,14 +8,14 @@ checkbox.addEventListener('click', displayPrices);
 function displayPrices() {
     if (checkbox.checked) {
         console.log('checked');
-        basicPrice.innerText = '$19.99';
-        proPrice.innerText = '$24.99';
-        masterPrice.innerText = '$39.99';
+        basicPrice.innerHTML = '<span>&dollar;</span>19.99';
+        proPrice.innerHTML = '<span>&dollar;</span>24.99';
+        masterPrice.innerHTML = '<span>&dollar;</span>39.99';
     }
     else {
         console.log('unchecked');
-        basicPrice.innerText = '$199.99';
-        proPrice.innerText = '$249.99';
-        masterPrice.innerText = '$399.99';
+        basicPrice.innerHTML = '<span>&dollar;</span>199.99';
+        proPrice.innerHTML = '<span>&dollar;</span>249.99';
+        masterPrice.innerHTML = '<span>&dollar;</span>399.99';
     }
 }

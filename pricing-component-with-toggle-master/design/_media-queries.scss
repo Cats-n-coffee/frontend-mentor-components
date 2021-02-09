@@ -1,0 +1,35 @@
+// -------------------------------------- MEDIA QUERIES 
+@media screen and (min-width: 900px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+
+    body:before {
+        background: url('/images/bg-top.svg') right 0 top -10% no-repeat, url('/images/bg-bottom.svg') left 0 bottom 0 no-repeat;
+    }
+
+    #container {
+        margin-top: -20px;
+    }
+
+    .bottom-div {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        
+        .card {
+            &:not(:first-child) {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    .card {
+        width: 350px;
+    }
+}

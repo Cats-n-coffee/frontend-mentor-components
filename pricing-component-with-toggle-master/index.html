@@ -6,44 +6,15 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <link rel="stylesheet" type="text/css" href="design/css/main.css">
-  <script defer src="design/script.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script defer src="script.js"></script>
   
   <title>Frontend Mentor | Pricing Component with Toggle</title>
 
 </head>
 <body>
-<!--
-  Our Pricing
-  Annually
-  Monthly
-
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
-
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
-
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
--->
   <div id="container">
-      <div class="top-div">
+      <section class="top-div">
           <h1>Our Pricing</h1>
           <div class="toggle-div">
             <span class="price-period">Annually</span>
@@ -53,12 +24,12 @@
             </label>
             <span class="price-period">Monthly</span>
           </div>
-      </div>
-      <div class="bottom-div">
+      </section>
+      <section class="bottom-div">
           <div class="card white-card" id="card-1">
               <ul>
                 <li><h2 class="card-title">Basic</h2></li>
-                <li class="card-price" id="basic-price">&dollar;199.99</li>
+                <li class="card-price" id="basic-price"><span>&dollar;</span>199.99</li>
                 <li class="card-details">500 GB Storage</li>
                 <li class="card-details">2 Users Allowed</li>
                 <li class="card-details">Send up to 3 GB</li>
@@ -69,7 +40,7 @@
           <div class="card blue-card" id="card-2">
               <ul>
                 <li><h2 class="card-title">Professional</h2></li>
-                <li class="card-price" id="professional-price">&dollar;249.99</li>
+                <li class="card-price" id="professional-price"><span>&dollar;</span>249.99</li>
                 <li class="card-details">1 TB Storage</li>
                 <li class="card-details">5 Users Allowed</li>
                 <li class="card-details">Send up to 10 GB</li>
@@ -79,14 +50,14 @@
           <div class="card white-card" id="card-3">
               <ul>
                 <li><h2 class="card-title">Master</h2></li>
-                <li class="card-price" id="master-price">&dollar;399.99</li>
+                <li class="card-price" id="master-price"><span>&dollar;</span>399.99</li>
                 <li class="card-details">2 TB Storage</li>
                 <li class="card-details">10 Users Allowed</li>
                 <li class="card-details">Send up to 20 GB</li>
               </ul>
               <button class="card-button">Learn More</button>
           </div>
-      </div>
+      </section>
   </div>
   
   <div class="attribution">
