@@ -3,20 +3,26 @@ main {
     flex-direction: column;
     padding: 1em;
     background: $white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 
     @media screen and (min-width: 600px) {
         flex-direction: row;
+        border-radius: 25px;
     }
 
     .all-inputs {
         display: flex;
         flex-direction: column;
+        gap: 1em;
         padding: 1em;
+        max-width: 379px;
     }
 
     .results {
         display: flex;
         flex-direction: column;
         padding: 1.1em;
+        max-width: 400px;
     }
 }
