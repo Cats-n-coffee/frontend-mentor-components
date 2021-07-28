@@ -1,0 +1,22 @@
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background: $white;
+
+    @media screen and (min-width: 600px) {
+        flex-direction: row;
+    }
+
+    .all-inputs {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .results {
+        display: flex;
+        flex-direction: column;
+        padding: 1.1em;
+    }
+}
