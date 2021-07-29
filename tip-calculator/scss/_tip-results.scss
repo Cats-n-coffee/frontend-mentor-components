@@ -47,3 +47,11 @@
     padding: .5em;
     text-transform: uppercase;
 }
+
+.reset-button:disabled {
+    opacity: .2;
+}
+
+.reset-button:hover, .reset-button:focus {
+    background: $hover-green;
+}

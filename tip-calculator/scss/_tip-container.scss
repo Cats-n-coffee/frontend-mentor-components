@@ -7,7 +7,7 @@ main {
     border-top-right-radius: 25px;
     gap: 1em;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 800px) {
         flex-direction: row;
         border-radius: 25px;
     }
@@ -24,9 +24,13 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 2.4em;
+        padding: 1.4em;
         max-width: 400px;
         background: $very-dark-cyan;
         border-radius: 15px;
+
+        @media screen and (min-width: 800px) {
+            padding: 2.4em;
+        }
     }
 }
