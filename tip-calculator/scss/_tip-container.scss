@@ -23,6 +23,7 @@ main {
     .results {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         padding: 1.1em;
         max-width: 400px;
         background: $very-dark-cyan;
